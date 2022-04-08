@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import * as ST from './styled';
+import Dropzone from './components/Dropzone';
+import { CryptoResultProvider } from './providers/CryptoResultsProvider/CryptoResultProvider';
+import Results from './components/Results';
+import { generateKeys } from './helpers/rsa';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    useEffect(() => {
+        generateKeys();
+    }, []);
+
+    return (
+        <CryptoResultProvider>
+            <ST.AppWrapper>
+                <ST.GlobalStyle/>
+                <Dropzone/>
+                <Results />
+            </ST.AppWrapper>
+        </CryptoResultProvider>
+    );
 }
 
 export default App;

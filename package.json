@@ -10,9 +10,19 @@
     "@types/node": "^16.11.26",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
+    "@types/rijndael-js": "^1.0.0",
+    "constants": "^0.0.2",
+    "cryptico": "^1.0.2",
+    "cryptico-js": "^1.1.0",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
+    "node-rsa": "^1.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-dropzone": "^12.0.4",
     "react-scripts": "5.0.0",
+    "rijndael-js": "^2.0.0",
+    "styled-components": "^5.3.5",
     "typescript": "^4.6.3",
     "web-vitals": "^2.1.4"
   },
@@ -39,5 +49,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/node-rsa": "^1.1.1",
+    "@types/styled-components": "^5.1.24"
   }
 }
